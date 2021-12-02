@@ -1,0 +1,79 @@
+$border-specs: solid 1px #ccc;
+
+.body {
+	padding: 10px 16px 10px 16px;
+}
+
+#newpost {
+	padding-bottom: 10px;
+	border-bottom: $border-specs;
+	form {
+		input.btn.btn-primary {
+			margin-top: 10px;
+		}
+	}
+}
+
+.post {
+
+	padding: 10px;
+	margin-bottom: 15px;
+	border: $border-specs;
+	border-radius: 3px;
+
+	.title {
+		font-weight: bold;
+	}
+
+	.datetime {
+		font-size: 0.8em;
+		font-style: italic;
+		line-height: 0%;
+		color: #696969;
+	}
+
+	.like {
+		display: block;
+		float: left;
+		margin-right: 5px;
+	}
+
+	textarea.edit-content.form-control {
+		margin-bottom: 5px;
+	}
+}
+
+#profile {
+
+	ul {
+	padding: 0;
+		li {
+			display: inline;
+			text-decoration: none;
+
+			span {
+				font-weight: bold;
+			}
+		}
+	}	
+}
+
+.btn.btn-primary.next {
+	float: right;
+	margin-bottom: 10px;
+}
+
+.username {
+	display: block;
+	margin-bottom: 10px;
+	height: 45px;
+
+	h2 {
+		float: left;
+	}
+
+	input.btn.btn-primary, input.btn.btn-secondary {
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+}

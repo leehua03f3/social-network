@@ -1,0 +1,30 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+	<div class="allpost">
+		<div id="newpost">
+			<h2>New Post</h2>
+			<form action="{% url 'newpost' %}" method="POST">
+				{% csrf_token %}
+				<textarea name="content" class="form-control" placeholder="Post a new entry here..."></textarea>
+				<input class="btn btn-primary" type="submit" value="Post">
+			</form>
+		</div>
+		<h2>All Posts</h2>
+		<!-- {% for post in posts %}
+			<div class="post">
+				<p class="title"><a href="{% url 'profile' post.user.username %}">{{ post.user.username }}</a></p>
+				<p class="datetime">{{ post.datetime }}</p>
+				<p class="content">{{ post.content }}</p>
+				<a href="#" class="like" id="{{ post.id }}">Like</a>
+				<a href="#">Comment</a>
+			</div>
+		{% endfor %} -->
+	</div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/post.js' %}"></script>
+{% endblock %}
